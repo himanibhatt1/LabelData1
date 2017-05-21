@@ -2,6 +2,7 @@
 
 # import necessary packages
 import pandas
+import os
 import numpy as np
 from nltk.corpus import stopwords
 from sklearn.model_selection import train_test_split
@@ -10,6 +11,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.tree import DecisionTreeClassifier
+
+os.chdir(r"/Users/kaushalpurohit/GitRepository/LabelData/")
 
 # Read text file from the local and create dataframe
 data = []

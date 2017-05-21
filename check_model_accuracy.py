@@ -1,5 +1,6 @@
 # import package
 import pandas
+import os
 from nltk.corpus import stopwords
 from sklearn import model_selection
 from sklearn.feature_extraction.text import CountVectorizer
@@ -13,11 +14,13 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.cross_validation import cross_val_score
 import matplotlib.pyplot as plt
 
+os.chdir(r"/Users/kaushalpurohit/GitRepository/LabelData/")
+
 # Read text data from local and  create Dataframe
 data = []
 label = []
 
-with open(r"/Users/kaushalpurohit/Documents/Himani/Label/LabelledData.txt",encoding = "utf-8") as f:
+with open(r"LabelledData.txt",encoding = "utf-8") as f:
     for i in f:
         a = i.split(" ,,, ")
         data.append(a[0])
